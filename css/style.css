@@ -14,7 +14,7 @@ body {
     background-size: cover;
 }
 
-#landing a, #learn a {     
+#landing a, #learn a, #contact a {     
     display: inline-block;     
     position: relative;    
     z-index: 1;     
@@ -29,6 +29,10 @@ body {
 
 #landing a:visited {
     color: white;
+}
+
+#logo-black {
+    display: none;
 }
 
 #navbar {
@@ -125,7 +129,7 @@ body {
 
 /* Most of this is for the section about meditation */
 
-#meditation, #about-us, #learn  {
+#meditation, #about-us, #learn, #contact  {
     min-height: 100vh;
 
     background-image: url("../img/paper.jpg");
@@ -138,11 +142,8 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 0;
-    padding-top: 2%;
     font-size: 300%;
-    position: relative;
-    padding-left: 6%;
+    /* position: relative; */
 }
 
 .arrow {
@@ -183,6 +184,7 @@ h1 {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row: 1;
+    padding-bottom: 10vh;
 }
 
 #med-text-2 {
@@ -213,6 +215,7 @@ hr {
    grid-column-end: 4;
    grid-row: 1;
    padding-bottom: 0;
+   font-size: 20px;
 }
 
 #profile-img-1 {
@@ -223,7 +226,9 @@ hr {
 #img1, #img2 {
     width: 30%;
     height: auto;
-    padding-left: 30%;
+    margin-left: 30%;
+    border: 2px solid black;
+    border-radius: 15px;
 }
 
 #img1 {
@@ -241,13 +246,15 @@ hr {
     grid-column: 3;
     grid-row: 2;
     margin-top: -5%;
+    font-size: 20px;
+
 }
 
 #text-2 {
     grid-column: 3;
     grid-row: 3;
     padding-right: 100px;
-    
+    font-size: 20px;
     margin-top: -5%;
 }
 
@@ -260,7 +267,11 @@ h3 {
                 Page 2 Specific CSS */
 
 
-#learn .navbar-item {
+#learn {
+    overflow: hidden;
+}
+
+#learn .navbar-item, #contact .navbar-item {
     color: black;
     font-size: 20px;
 
@@ -268,36 +279,529 @@ h3 {
     border-bottom: 2px solid black;
 }
 
-#learn .navbar-item a:link {
+#learn .navbar-item a:link, #contact .navbar-item a:link {
     color: black;
     text-decoration: none;
 }
 
-#learn .navbar-item a:visited {
+#learn .navbar-item a:visited, #contact .navbar-item a:visited, .book-button a{
     color: black;
 }
 
-#learn ul a:link {
+#learn ul a:link, .book-button a {
     text-decoration: none;
 }
 
 
-#learn ul {
+ul#contents {
     text-align: center;
     font-size: 20px;
 }
 
-#learn ul li {
+ul#contents li {
     display: block;
     padding: 5px;
 }
 
 #basic-grid {
     display: grid;
-    grid-template-columns: 1fr 4fr 4fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
 }
 
-#basic-text {
+#basic-text-1 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 1;
+    font-size: 20px;
+    padding-right: 20px;
+    padding-left: 50px;
+}
+
+#basic-img {
+    grid-column: 4;
+    grid-row: 1;
+    padding-bottom: 5%;
+}
+
+#med {
+    width: 80%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+#basic-text-2 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row: 2;
+    font-size: 20px;
+    padding-top: 2%;
+    padding-left: 50px;
+}
+
+#basic-list {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#basic-list li {
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+/* This CSS is specific to the course and retreat sections */
+
+#course {
+    min-height: 100vh;
+}
+
+
+#course-grid, #retreat-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+}
+
+#course h1, #retreat h1 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    text-align: center;
+    margin-top: 2px;
+}
+
+#course .arrow, #retreat .arrow {
+    grid-column: 5;
+    grid-row: 1;
+    width: 30%;
+    height: auto; 
+}
+
+#course-img {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row: 2;
+    padding-left: 50px;
+}
+
+#med-banner {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+}
+
+#course-text {
+    padding-top: 2%;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row: 3;
+    font-size: 20px;
+    padding-left: 50px;
+    margin-bottom: 1.5%;
+}
+
+#course-text ul {
+    padding: 0 10%;
+}
+
+#course-text ul li {
+    margin-top: 10px;
+}
+
+.book-button {
+    grid-column: 3;
+    grid-row: 4;
+    font-size: 300%;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+/* This is retreat specific CSS */
+
+#retreat {
+    min-height: 100vh;
+}
+
+#retreat-img-1 {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#ret-img-1, #ret-img-2 {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+#retreat-text-1 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 2;
+    font-size: 20px;
+}
+
+#retreat-text-2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 3;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-right: 30px;
+}
+
+#retreat-img-2 {
+    grid-column: 4;
+    grid-row: 3;
+    margin-top: 50px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+#form h1 {
+    padding-top: 10%;
+    font-size: 500%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        width: 100%;
+    }
+
+    #landing, #meditation, #about-us, #learn {
+        background-image: none;
+        background-color: #eddabf;
+        color: black;
+        overflow: hidden;
+    }
+
+    #landing a:link {
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+    }
     
-}
+    #landing a:visited {
+        color: black;
+        font-size: 15px;
+    }
+    
+    #navbar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 0.5fr;
+    }
 
+    #logo {
+        display: none;
+    }
+
+    #logo-black {
+        display: block;
+    }
+
+    .navbar-item1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 1;
+    }
+
+    #landing .navbar-item {
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .navbar-item a {
+        font-size: 15px;
+    }
+
+    .navbar-item4 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .navbar-item2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .navbar-item3 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #big-text {
+        display: block;
+        min-height: 0;
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+
+    #text-container {
+        font-size: 20px;
+        color: black;
+    }
+
+    #button-container {
+        margin-top: 3%;
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .button {
+        padding: 30px 0;
+        margin: 20px 0;
+        border-radius: 15px;
+        border: 2px solid black;
+        font-size: 50px;
+    }
+
+    #button1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #button2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    #button3 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #meditation h1, #about-us h1 {
+        font-size: 200%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .arrow {
+        width: 6%;
+        height: auto;
+    }
+
+    #meditation-grid {
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    .meditation-img {
+        grid-column: 2;
+        grid-row: 1;
+        display: block;
+        padding-left: 25px;
+    }
+
+    #med-text-1 {
+        font-size: 15px;
+        grid-column: 2;
+        grid-row: 2;
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    #med-text-2 {
+        font-size: 15px;
+        grid-column: 2;
+        grid-row: 3;
+        padding: 0;
+    }
+
+    #about-grid {
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr;
+    }
+
+    .main-text, #text-1, #text-2 {
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-text {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #profile-img-1 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #text-1 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #profile-img-2 {
+        grid-column: 2;
+        grid-row: 4;
+        width: 100%;
+        height: auto;
+    }
+
+    #text-2 {
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    /* --------------------------------------------------------------------------------- */
+    #learn {
+        font-size: 15px;
+    }
+
+    #learn h1 {
+        font-size: 200%;
+    }
+
+
+    #basic-grid, #course-grid {
+        grid-template-columns: 1fr 10fr 1fr;
+    }
+
+    #basic-img {
+        display: none;
+    }
+
+    #basic-text-1, #basic-text-2, #basic-list {
+        padding-left: 0;
+        font-size: 15px;
+    }
+
+    #basic-text-1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #basic-text-2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #basic-list {
+        grid-column: 2;
+        grid-row: 3;
+        margin-left: 30px;
+        padding-right: 0;
+    }
+
+    /* --------- */
+
+    #course-grid h1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #course-grid .arrow {
+        grid-column: 3;
+        grid-row: 1; 
+        width: 50%;
+        height: auto;
+        /* float: left; */
+    }
+
+    #course-img, #course-text {
+        padding-left: 0;
+        font-size: 15px;
+        margin-left: 0;
+    }
+
+    #course-img {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .book-button {
+        grid-column: 2;
+        grid-row: 4;
+        font-size: 200%;
+        margin: 0 5%;
+        padding: 2% 0;
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+
+    /* --------------------- */
+
+    #retreat-grid {
+        grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+    }
+
+    #retreat h1 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row: 1;
+    }
+
+    #retreat-img-1, #retreat-img-2, #retreat-text-1, #retreat-text-2 {
+        padding-left: 0;
+        font-size: 15px;
+    }
+
+    #retreat-img-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+
+        margin-top: 0;
+    }
+
+    #retreat-img-2 {
+        grid-column: 4;
+        grid-row: 2;
+                margin-top: 0;
+
+    }
+
+    #ret-img-1 {
+        width: 125%;
+        height: auto;
+        margin-left: -20px;
+    }
+
+    #ret-img-2 {
+        width: 100%;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    #retreat-text-1 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row: 3;
+    }
+
+    #retreat-text-2 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row: 4; 
+        margin: 0;
+    }
+
+    #retreat-grid .book-button {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row: 5;
+        padding: 0 -10px;
+    }
+
+    /*------------------------------------------------------- */
+
+    #form h1 {
+        font-size: 300%;
+        padding-top: 0px;
+    }
+
+    #contact {
+        overflow: hidden;
+    }
+   
+}
