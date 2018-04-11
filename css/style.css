@@ -466,7 +466,12 @@ ul#contents li {
     font-size: 500%;
 }
 
-@media only screen and (max-width: 768px) {
+.warning {
+    color: red;
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
 
     body {
         width: 100%;
@@ -612,7 +617,7 @@ ul#contents li {
         font-size: 15px;
         grid-column: 2;
         grid-row: 3;
-        padding: 0;
+       
     }
 
     #about-grid {
@@ -803,5 +808,8 @@ ul#contents li {
     #contact {
         overflow: hidden;
     }
+
+
    
 }
+
